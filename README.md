@@ -28,11 +28,13 @@ external-modules = ["netcdf"]
 ### Step 4: Build and run your fpm projects with the relevant flags
 
 Running `nf-config --flibs` should return the conda netcdf lib path and libs. For example:
--L/your/conda/environment/folder/fpm_netcdf_env/lib -lnetcdff -lnetcdf
+
+*-L/your/conda/environment/folder/fpm_netcdf_env/lib -lnetcdff -lnetcdf*
 
 
 Running `nf-config --fflags` should return the conda netcdf include path. For example:
--I/your/conda/environment/folder/fpm_netcdf_env/linclude
+
+*-I/your/conda/environment/folder/fpm_netcdf_env/linclude*
 
 These need to be specified when building or running your fpm project. You can do this by:
 
@@ -45,4 +47,16 @@ and
 ```
 fpm run --flag "$(nf-config --fflags)" --link-flag "$(nf-config --flibs)
 ```
+
+### Step 5: Use in your fpm project!
+
+In your Fortran code, simply use netcdf the same way you would use any other module:
+
+```
+use netcdf
+```
+
+Check out the code to see an example.
+
+**TIP:** `ncdump` is part of the netcdf set of utilities. The command `ncdump -h [file.nc]` will let you examine the file header and read the variable names and dimensions.
 
