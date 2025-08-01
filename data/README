@@ -1,0 +1,54 @@
+Contents Description: (see more details in file header)
+=====================
+The file contains means of several variables from an ECHAM5 palaeoclimate simulation. Details about the simulation are given in the file name and file header. For information about the simulation setup and boundary conditions, we refer the user to the associated publication. 
+
+Variables included in data package p000:
+- aprl: large scale precipitation
+- aprc: convective precipitation
+- temp2: 2m air temperature
+- u10: zonal near surface wind speeds
+- v10: meridional near surface wind speeds
+
+Variables included in data package p001:
+- aprl: large scale precipitation
+- aprc: convective precipitation
+- aprt: total precipitation (large scale and convective)
+- temp2: 2m air temperature
+- tsurf: surface temperature
+- srads: net surface solar radiation
+- ahfl: latent heat flux
+- evap: evaporation
+- pe: potential evaporation
+- q: specific humidity
+- ws: soil wetness
+- drain: drainage
+- runoff: surface runoff and drainage
+- u10: zonal near surface wind speeds
+- v10: meridional near surface wind speeds
+
+Publication: (This is how the data should be cited.) 
+============
+Mutz S.G., Ehlers T. A., Werner M., Lohmann G., Stepanek C., Li J., (2018). Estimates of Late Cenozoic climate change relevant to Earth surface processes in tectonically active orogens. Earth Surface Dynamics. doi.org/10.5194/esurf-6-271-2018
+
+Authors:
+========
+Mutz S.G., Ehlers T. A., Werner M., Lohmann G., Stepanek C., Li J.
+
+License: 
+========
+This work is distributed under the Creative Commons Attribution 4.0 International License
+
+Format:
+=======
+netCDF (nc)
+
+File Names: 
+===========
+[publication]_[experiment ID]_[package]_[means].nc
+experiment ID: usually a letter followed by 3-5 digits, e007_2 (pre-industrial), e008 (Mid-Holocene), e009 (Last Glacial Maximum), e010 (Pliocene)
+packages:      p000 for selection of basic model variables, p001 for additional variables (constructed from other model variables)
+means:         lterm for long term monthly means, mm for monthly means 
+
+Correspondence:
+===============
+Sebastian G. Mutz (sebastian@sebastianmutz.com)
