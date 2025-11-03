@@ -39,13 +39,13 @@ Running `nf-config --fflags` should return the conda netcdf include path. For ex
 These need to be specified when building or running your fpm project. You can do this by:
 
 ```
-fpm build --flag "$(nf-config --fflags)" --link-flag "$(nf-config --flibs)
+fpm build --flag "$(nf-config --fflags)" --link-flag "$(nf-config --flibs)"
 ```
 
 and
 
 ```
-fpm run --flag "$(nf-config --fflags)" --link-flag "$(nf-config --flibs)
+fpm run --flag "$(nf-config --fflags)" --link-flag "$(nf-config --flibs)"
 ```
 
 ### Step 5: Use in your fpm project!
